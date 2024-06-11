@@ -1,0 +1,145 @@
+@import "nord.css";
+
+/* Min 2/3 width, max 1/2 width */
+@media (max-width: 768px) {
+  :root {
+    --wrapper-max-width: 384px;
+    --wrapper-margin: 16px;
+  }
+
+  body {
+    font-size: small;
+  }
+}
+
+
+/* + 64px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --wrapper-max-width: 512px;
+    --wrapper-margin: 32px;
+  }
+
+  body {
+    font-size: medium;
+  }
+}
+
+
+/* + 128px */
+@media (min-width: 1024px) and (max-width: 1536px) {
+
+  :root {
+    --wrapper-max-width: 768px;
+    --wrapper-margin: 64px;
+  }
+
+  body {
+    font-size: medium;
+  }
+}
+
+
+@media (min-width: 1536px) {
+  :root {
+    --wrapper-max-width: 1024px;
+    --wrapper-margin: 128px;
+  }
+
+  body {
+    font-size: large;
+  }
+}
+
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--nord0);
+  color: var(--nord6);
+  font-family: monospace;
+  text-align: left;
+}
+
+a {
+  color: var(--nord13);
+}
+
+tt {
+  /* background: var(--nord1); */
+  color: var(--nord12);
+}
+
+
+hr {
+  background: var(--nord13);
+}
+
+h1 tt,
+h2 tt,
+h3 tt {
+  background: var(--nord0);
+}
+
+h1,
+h3,
+h5 {
+  color: var(--nord13);
+}
+
+h2,
+h4,
+h6 {
+  color: var(--nord14);
+}
+
+body {
+  background: var(--nord0);
+}
+
+.wrapper {
+  max-width: var(--wrapper-max-width);
+  background: null;
+  margin: auto;
+  margin-bottom: var(--wrapper-margin);
+  margin-top: var(--wrapper-margin);
+  /* background: var(--nord1); */
+}
+
+
+
+.home-0,
+.home-1 {
+  font-size: xxx-large;
+}
+
+
+.home-0 strong {
+  color: var(--nord8);
+}
+
+.home-1 strong {
+  color: var(--nord12);
+}
+
+
+
+.home-2 {
+  font-size: xx-large;
+}
+
+.home-2 p,
+.home-2 ul,
+.home-2 a {
+  padding: 0px;
+  color: var(--nord4);
+}
+
+
+.home-2 p,
+.home-2 li {
+  list-style-type: none;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}

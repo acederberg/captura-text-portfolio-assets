@@ -1,0 +1,59 @@
+data:
+  path_docs: ./docs
+  template_file: "template.fmt"
+  identifier: oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4
+  collection:
+    name: Resume
+    description: Resume and Supporting Documents
+  documents:
+    home.rst:
+      description: Home
+      content_file: pages/HOME.rst
+      format_in: rst
+      format_out: rst
+    about.rst:
+      description: About
+      content_file: pages/ABOUT.rst
+      format_in: rst
+      format_out: rst
+    resume.rst:
+      description: Resume
+      content_file: pages/RESUME.rst
+      format_in: rst
+      format_out: rst
+    resume:
+      description: Resume
+      content_file: pages/RESUME.rst
+      format_in: rst
+      format_out: html
+    home:
+      description: Home
+      content_file: pages/HOME.rst
+      format_in: rst
+      format_out: html
+    about:
+      description: About
+      content_file: pages/ABOUT.rst
+      format_in: rst
+      format_out: html
+    commits:
+      description: Commits
+      content_file: pages/COMMITS.rst
+      format_in: rst
+      format_out: html
+    projects:
+      description: Commits
+      content_file: pages/PROJECTS.rst
+      format_in: rst 
+      format_out: html
+    index.css:
+      description: Commits
+      content_file: css/index.css
+      format_in: css
+      format_out: css
+    nord.css:
+      description: Nord
+      content_file: css/nord.css
+      format_in: css
+      format_out: css
+

@@ -1,8 +1,15 @@
-Adrian Cederberg | adrn.cederberg123@gmail.com | `Github <https://github.com/acederberg>`_ | `acederberg.io <https://acederberg.io>`_
-======================================================================================================================================
+===============================================================================
+Adrian Cederberg 
+===============================================================================
+
+adrn.cederberg123@gmail.com | `Github <https://github.com/acederberg>`_ | `acederberg.io <https://acederberg.io>`_
+
+-------------------------------------------------------------------------------
+
 
 Education
--------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 **University of New Mexico, Spring 2015 - Fall 2019**
 
@@ -11,27 +18,30 @@ Education
 - Worked as a grader, tutor, and researcher.
 
 
-Relevent Work
 -------------------------------------------------------------------------------
 
-
-Captura and ``acederberg.io``
+Relevent Work
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Founder of Captura and ``acederberg.io``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **January 2024 - Now**
 
 My personal project which I started and intend to use to grow into a business. 
-Read more `here<captura.acederberg.io>`. Currently this project is in its very 
-initial phase.
+Read more `on github <https://github.com/acederberg>`_. Currently this project 
+is in its very initial phase.
 
 - Designed, implemented, tested, and deployed ``captura``. To learn more about 
-  captura and get a demo, check out `captura on github<captura.acederbebrg.io>`.
-- Deployed captura to linode using pulumi (IaC).
+  captura and get a demo, check out the `captura demo <captura.acederbebrg.io>`_.
+- See the captura 
+- Deployed captura to linode using pulumi and python (IaC, CI/CD).
 - Kept to a schedule   without external management.
 
 
 Software Engineer and Senior Software Engineer | Mountain Vector Energy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **January 2022 - December 2023**
 
@@ -48,7 +58,7 @@ Software Engineer and Senior Software Engineer | Mountain Vector Energy
 
 
 Developer and Devops   Engineer | My Portfolio and Self-Study
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. Read more `here<{{ url_self_study }}>`_.
 
@@ -57,7 +67,7 @@ Developer and Devops   Engineer | My Portfolio and Self-Study
 
 
 Research Assistant | University of New Mexico Department of Mechanical Engineering
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Summer 2019 - Winter 2020**
 
@@ -72,7 +82,7 @@ Research Assistant | University of New Mexico Department of Mechanical Engineeri
 
 
 Grader | University of New Mexico Department of   Mathematics
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Fall 2019 and Fall 2020**
 
@@ -82,20 +92,22 @@ Grader | University of New Mexico Department of   Mathematics
 
 
 Tutor | University of New Mexico Math and Learning Lab
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Improved student outcomes in basic algebra classes using the ALEKs program by 
   providing students individual attention.
 
 
-Skills and Tools
 -------------------------------------------------------------------------------
 
-- Languages: Python, Javascript,   HCL, Go.
-- Tools: Kubernetes, Docker, Helm, Traefik, Terraform, Pulumi.
-- Libraries: Pydantic, FastAPI, Typer, SQLAlchemy, NextJS, Etc.
-- Data:   YAML, JSON, CSS, HTML, XML, TOML.
-- Etc: Pipelines, Infratstructure as   code, Continuous Integration and Deployment.
-- Databases: MySQL, MongoDB, Redis.
-- Operating Systems: Linux, Windows.
-- Editing tools: Vim, Neovim, Visual Studio code.
+Skills and Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Languages: ``Python``, ``Javascript``, ``HCL``, ``Go``.
+- Tools: ``Kubernetes``, ``Docker``, ``Helm``, ``Traefik``, ``Terraform``, ``Pulumi``.
+- Libraries: ``Pydantic``, ``FastAPI``, ``Typer``, ``SQLAlchemy``, ``NextJS``, Etc.
+- Data: ``YAML``, ``JSON``, ``CSS``, ``HTML``, ``XML``, ``TOML``.
+- Etc: ``Pipelines``, ``Infrastructure as Code``, ``Continuous Integration and Deployment``.
+- Databases: ``MySQL``, ``MongoDB``, ``Redis``.
+- Operating Systems: ``Linux``, ``Windows``.
+- Editing tools: ``Vim``, ``Neovim``, ``Visual Studio Code``.

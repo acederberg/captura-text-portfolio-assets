@@ -1,0 +1,20 @@
+<!-- vi: set ft=html : -->
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/index.css">
+  <link rel="shortcut icon" href="https://fastapi.tiangolo.com/img/favicon.png">
+  <title>{document.description}</title>
+</head>
+
+<body>
+  <!-- <div class="navbar"> -->
+  <!--   <a href="/home">Home</a> -->
+  <!-- </div> -->
+  <div class="wrapper">
+    {body}
+  </div>
+</body>
+
+</html>
