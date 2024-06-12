@@ -60,6 +60,11 @@ data:
       content_file: css/nord.css
       format_in: css
       format_out: css
+    commits.css:
+      description: Nord
+      content_file: css/commits.css
+      format_in: css
+      format_out: css
 
     # ----------------------------------------------------------------------- #
     # NOTE: SVG

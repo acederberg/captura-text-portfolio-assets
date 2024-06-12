@@ -64,7 +64,7 @@ body {
   margin: 0;
   height: 100%;
   background: var(--background);
-  color: var(--nord6);
+  color: var(--nord4);
   font-family: monospace;
   text-align: left;
 }
@@ -74,8 +74,8 @@ a {
 }
 
 tt {
-  background: var(--background);
-  color: var(--nord12);
+  color: var(--nord8);
+  /* color: var(--nord15); */
 }
 
 
@@ -115,9 +115,13 @@ body {
 }
 
 
+/* ------------------------------------------------------------------------- */
 
+.home-about-title,
 .home-0,
 .home-1 {
+  /* margin-bottom: var(--wrapper-margin); */
+  /* margin-top: var(--wrapper-margin); */
   font-size: xxx-large;
 }
 
@@ -179,4 +183,40 @@ body {
   list-style-type: none;
   padding-bottom: 16px;
   padding-top: 16px;
+}
+
+.home-3 {
+  height: 50vh;
+}
+
+.home-about-title {
+  color: var(--nord14)
+}
+
+.home-about-content {
+  font-size: x-large;
+  /* margin-bottom: var(--wrapper-margin); */
+  /* margin-top: var(--wrapper-margin); */
+  padding-bottom: var(--wrapper-margin);
+  padding-top: var(--wrapper-margin);
+}
+
+
+.commits {
+  /* margin-bottom: var(--wrapper-margin); */
+  /* margin-top: var(--wrapper-margin); */
+  padding-bottom: var(--wrapper-margin);
+  padding-top: var(--wrapper-margin);
+}
+
+.commits img {
+  /* https://stackoverflow.com/questions/45439710/center-an-image-in-css */
+  margin: auto;
+  padding: inherit;
+  display: block;
+
+  clip-path: circle();
+  /* height: 256px; */
+  /* width: 256px; */
+  /* border-radius: 128px; */
 }
