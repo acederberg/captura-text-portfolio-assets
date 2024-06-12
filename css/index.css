@@ -1,5 +1,10 @@
 @import "nord.css";
 
+:root {
+  --background: #200f0f;
+}
+
+/* ------------------------------------------------------------------------- */
 /* Min 2/3 width, max 1/2 width */
 @media (max-width: 768px) {
   :root {
@@ -52,11 +57,13 @@
 }
 
 
+/* ------------------------------------------------------------------------- */
+
 html,
 body {
   margin: 0;
   height: 100%;
-  background: var(--nord0);
+  background: var(--background);
   color: var(--nord6);
   font-family: monospace;
   text-align: left;
@@ -67,7 +74,7 @@ a {
 }
 
 tt {
-  /* background: var(--nord1); */
+  background: var(--background);
   color: var(--nord12);
 }
 
@@ -79,7 +86,7 @@ hr {
 h1 tt,
 h2 tt,
 h3 tt {
-  background: var(--nord0);
+  background: var(--background);
 }
 
 h1,
@@ -95,7 +102,7 @@ h6 {
 }
 
 body {
-  background: var(--nord0);
+  background: var(--background);
 }
 
 .wrapper {
@@ -129,11 +136,41 @@ body {
   font-size: xx-large;
 }
 
+.home-2 object {
+  filter: invert(94%) sepia(2%) saturate(1401%) hue-rotate(187deg) brightness(99%) contrast(85%);
+}
+
 .home-2 p,
 .home-2 ul,
 .home-2 a {
+  margin: 0px;
   padding: 0px;
   color: var(--nord4);
+  text-decoration: none;
+}
+
+.home-2 li {
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.home-2 li:hover {
+  background: var(--nord10);
+}
+
+.home-2 object {
+  width: 32px;
+  padding-right: 16px;
+  /* Because svg is wrapped in <a>. */
+}
+
+.home-2 .image-reference {
+  flex-grow: 0;
+}
+
+.home-2 a {
+  flex-grow: 1;
 }
 
 

@@ -46,6 +46,10 @@ data:
       content_file: pages/PROJECTS.rst
       format_in: rst 
       format_out: html
+
+    # ----------------------------------------------------------------------- #
+    # NOTE: CSS
+
     index.css:
       description: Commits
       content_file: css/index.css
@@ -56,4 +60,33 @@ data:
       content_file: css/nord.css
       format_in: css
       format_out: css
+
+    # ----------------------------------------------------------------------- #
+    # NOTE: SVG
+
+    about.svg:
+      description: About Icon
+      content_file: icons/about.svg
+      format_in: svg
+      format_out: svg
+    database.svg:
+      description: Database Icon
+      content_file: icons/database.svg
+      format_in: svg
+      format_out: svg
+    document.svg:
+      description: Database Icon
+      content_file: icons/document.svg
+      format_in: svg
+      format_out: svg
+    git.svg:
+      description: Git Icon
+      content_file: icons/git.svg
+      format_in: svg
+      format_out: svg
+    github.svg:
+      description: Github Icon
+      content_file: icons/github.svg
+      format_in: svg
+      format_out: svg
 

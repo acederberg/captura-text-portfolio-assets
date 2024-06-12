@@ -1,6 +1,5 @@
-history: []
-status:
-  collection:
+history:
+- collection:
     deleted: false
     description: Resume and Supporting Documents
     name: Resume
@@ -34,6 +33,151 @@ status:
       name: commits
       name_captura: commits-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-html
       uuid: ChrvCyxLHHM
+    home:
+      content_file: pages/HOME.rst
+      deleted: false
+      description: Home
+      format_in: rst
+      format_out: html
+      name: home
+      name_captura: home-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-html
+      uuid: k72qGcQI34Y
+    home.rst:
+      content_file: pages/HOME.rst
+      deleted: false
+      description: Home
+      format_in: rst
+      format_out: rst
+      name: home.rst
+      name_captura: home.rst-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-rst
+      uuid: yWSDTAIN0xA
+    index.css:
+      content_file: css/index.css
+      deleted: false
+      description: Commits
+      format_in: css
+      format_out: css
+      name: index.css
+      name_captura: index.css-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-css
+      uuid: vIK6fjWVNZU
+    nord.css:
+      content_file: css/nord.css
+      deleted: false
+      description: Nord
+      format_in: css
+      format_out: css
+      name: nord.css
+      name_captura: nord.css-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-css
+      uuid: IwoZX6DZBs0
+    projects:
+      content_file: pages/PROJECTS.rst
+      deleted: false
+      description: Commits
+      format_in: rst
+      format_out: html
+      name: projects
+      name_captura: projects-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-html
+      uuid: _TCl3gKYL7w
+    resume:
+      content_file: pages/RESUME.rst
+      deleted: false
+      description: Resume
+      format_in: rst
+      format_out: html
+      name: resume
+      name_captura: resume-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-html
+      uuid: 7c3gRR7lV5o
+    resume.rst:
+      content_file: pages/RESUME.rst
+      deleted: false
+      description: Resume
+      format_in: rst
+      format_out: rst
+      name: resume.rst
+      name_captura: resume.rst-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-rst
+      uuid: fF0c0LQb0Do
+  identifier: oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4
+  path_docs: ./docs
+status:
+  collection:
+    deleted: false
+    description: Resume and Supporting Documents
+    name: Resume
+    name_captura: Resume-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4
+    uuid: wNzA-0bJj1k
+  documents:
+    about:
+      content_file: pages/ABOUT.rst
+      deleted: false
+      description: About
+      format_in: rst
+      format_out: html
+      name: about
+      name_captura: about-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-html
+      uuid: munJB1kuV9c
+    about.rst:
+      content_file: pages/ABOUT.rst
+      deleted: false
+      description: About
+      format_in: rst
+      format_out: rst
+      name: about.rst
+      name_captura: about.rst-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-rst
+      uuid: pY0nFqgYssI
+    about.svg:
+      content_file: icons/about.svg
+      deleted: false
+      description: About Icon
+      format_in: svg
+      format_out: svg
+      name: about.svg
+      name_captura: about.svg-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-svg
+      uuid: KuFfUDuaOqY
+    commits:
+      content_file: pages/COMMITS.rst
+      deleted: false
+      description: Commits
+      format_in: rst
+      format_out: html
+      name: commits
+      name_captura: commits-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-html
+      uuid: ChrvCyxLHHM
+    database.svg:
+      content_file: icons/database.svg
+      deleted: false
+      description: Database Icon
+      format_in: svg
+      format_out: svg
+      name: database.svg
+      name_captura: database.svg-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-svg
+      uuid: mRXsIR_ETU8
+    document.svg:
+      content_file: icons/document.svg
+      deleted: false
+      description: Database Icon
+      format_in: svg
+      format_out: svg
+      name: document.svg
+      name_captura: document.svg-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-svg
+      uuid: WG7rQZLBTIc
+    git.svg:
+      content_file: icons/git.svg
+      deleted: false
+      description: Git Icon
+      format_in: svg
+      format_out: svg
+      name: git.svg
+      name_captura: git.svg-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-svg
+      uuid: 5WmxiOdN2oI
+    github.svg:
+      content_file: icons/github.svg
+      deleted: false
+      description: Github Icon
+      format_in: svg
+      format_out: svg
+      name: github.svg
+      name_captura: github.svg-oikS2ozWbOawuhVDPD9FsuMtfLkhqGQoK9fXt8nN6S4-svg
+      uuid: vMhuOjxPGdE
     home:
       content_file: pages/HOME.rst
       deleted: false
