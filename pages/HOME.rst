@@ -21,7 +21,6 @@
 
 .. |github| image:: /github.svg
    :height: 32px
-   :target: https://github.com/acederberg
    :alt: github
 
 .. |about| image:: /about.svg
@@ -43,13 +42,15 @@
    - |about| `About Me </about>`_
    - |commits| `Commits <#commits>`_
    - |projects| `Projects </projects>`_
-   - `Captura`
+
+.. - `Captura`
 
 
 .. container:: home-3
 
    .. This is a filler, do not remove it. Also, do not use a title in the next 
       section.
+
 
 .. raw:: html
 
@@ -85,9 +86,11 @@
    .. This is a filler, do not remove it. Also, do not use a title in the next 
       section.
 
+
 .. raw:: html
 
   <a name="commits"></a>
+
 
 .. container:: home-about-title
 

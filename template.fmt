@@ -4,6 +4,7 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="/text/index.css">
+  <link rel="stylesheet" type="text/css" href="/index.css">
   <link rel="shortcut icon" href="https://fastapi.tiangolo.com/img/favicon.png">
   <title>{document.description}</title>
 </head>
