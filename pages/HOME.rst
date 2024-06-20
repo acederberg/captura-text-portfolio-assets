@@ -66,7 +66,7 @@
 
    The site is built from the content of `captura-text-portfolio-assets <https://github.com/acederberg/captura-text-portfolio-assets>`_ using the
    `text <https://github.com/acederberg/captura-text>`_ extension for `captura <https://github.com/acederberg/captura>`_. 
-   It does nothing all too fancy, since developing an deploying a ``js``/``ts``/``pHp`` frontend (
+   It does nothing all too fancy, since developing an deploying a ``js``/``ts``/``pHp`` front-end (
    for instance) would be overkill for my purpose and would fail to show a use-case for ``captura``.
 
    All of the pages on this site are stored and served by captura, and all ``HTML``

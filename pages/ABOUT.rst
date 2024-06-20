@@ -2,57 +2,150 @@ Hello, My Name is Adrian Cederberg!
 ===============================================================================
 
 I am an engineer from Albuquerque, New Mexico. Lately I am interested in 
-writing software as I have found it to be an indispensible skill in the 
-various persuits that interest me. My technical interests include mathematics,
+writing software as I have found it to be an indispensable skill in the 
+various pursue that interest me. My technical interests include mathematics,
 physics, and software. 
 
-At the moment, I am working on captura, an easy to extend sharing API 
+At the moment, I am working on ``captura``, an easy to extend sharing API 
 framework from which I intend to make a few other projects. I have also built 
-this blog site on top of captura, and this document that you are reading is 
-stored in captura.
+this blog site on top of ``captura``, and this document that you are reading is 
+actually stored in `captura <https://github.com/acederberg/captura` using 
+the `captura-text <https://github.com/acederberg/captura-text>` plugin. Raw 
+site content can be found in `another repo <https://github.com/acederberg/captura-text-portfolio-assets>`.
 
-History
+For more about this site see `about this page </home#about>` and for a succinct
+statement of my professional experience see `my resume </resume>`.
+
+
+My Experience with Technologies
 -------------------------------------------------------------------------------
 
 I first found my interest in computers as a young teenager. I played around by
 jailbreaking my iPod, HTML sheets, and more. Eventually, I forgot about this 
 as I had other interests (principally music and sport). 
 
-About two years in to college (while getting my applied mathematics degree) I 
-had to take a class in matlab. I found matlab to be very easy to pick up and 
-quite enjoyed it and found myself to be a bit ahead of my peers - however there 
-was one very big downside - the limitted applications and expensive licensing 
-of matlab made it inconvenient. 
+About two years into college (while getting my applied mathematics degree) I 
+had to take a class in ``Matlab``. I found ``Matlab`` to be very easy to pick up and 
+initially quite enjoyed it and found myself to be a bit ahead of my peers 
+- however there was one very big downside - the expensive licensing recurring
+for ``Matlab`` made it inconvenient. 
 
 To this end, I decided that it would make more sense to learn python as it did
 not have the aforementioned limitations. Python was easy to learn, get started
 with, and build basic scripts with. Further, I liked that I did not have to use
-the matlab IDE. Eventually I took a course in python at UNM where I gained some 
-more formal knowledge of software. 
+the ``Matlab`` IDE. Eventually, I took a course in python at UNM where I gained some 
+more formal knowledge of code and software. 
 
-I further honed my skills working as a research assistent by building and 
-programming devices to record experimental data consisting of magnetic (vector)
+I further honed my skills working as a research assistant by building and 
+programming drivers for devices to record experimental data consisting of magnetic (vector)
 fields as well as plotting and maintaining this data. 
 
 In spring 2020 I decided to leave graduate school after only one semester as
-it was beyond silly to pay the universities exorbident fees for online classes.
+it was silly to pay the universities exorbitant fees for online classes.
 At this point, I had decided that software was my most marketable skill and 
 that I wanted to go forth and make a living.
+
+For a while I'd entertained the idea of taking a deep dive into this subject
+matter as I found it compelling, entertaining, and useful. For these reasons
+it was easy to put in the work and learn.
 
 I took the time to teach myself about the development and deployment of web 
 applications. At this time, I learned how to use libraries like ``flask`` 
 and ``sqlalchemy``, databases like ``mysql`` and ``mongodb``, deployment tools
 such as ``ansible``, ``docker``, and ``kubernetes`` by putting together a 
-portfolio to have proof of ability. *This code isn't available publicly, 
-however if you truely want to see it ask me for a link.* 
+portfolio to have proof of ability. *Said code isn't available publicly, 
+however if you truely want to see it ask me for a link and odds are that you'll
+be provided access.* 
 
-At the age of 24, I was living off what little saving I had from college, 
-living in the cheapest house I could find, making money by working for my land-
-lord, and without a car (I had never owned a car at this point). The pressure 
-to succeed in aquiring finance was dire - A continued to aquire skills by 
+At the age of 24, I was living off what little saving I had from college
+in the cheapest house I could find, making money by working for my land-
+lord, and without a car *(I had never owned a car at this point)*. The pressure 
+to succeed in acquiring finance was dire - A continued to accumulate skills by 
 completing a number of small projects while I applied for jobs. I was shocked 
 when I got calls back, but the job offers were at first less than appealing.
 
 Finally, after rejecting some not so great job offers, I landed an interview 
-with amazon. I made it to final interviews, however in the end the jobs shoes
-were too big for a first-timer such as myself. Eventually, I did get a job.
+with Amazon. I made it to final interviews, however in the end the jobs shoes
+were too big for a first-timer such as myself. Later, on the other side of the
+table, I found that I likely would have not hired myself with my level of 
+ability and experience at the time I interviewed with Amazon.
+
+To say the least this was discouraging. I had wasted an incredibly valuable 
+opportunity by being too green. In spite of this I decided to keep pushing.
+Eventually, I did get a job.
+
+I accepted a job offer from 'Mountain Vector Energy'. On my first day the CTO
+at the time was to return from his month long break and we were to begin 
+developing a new application. However, he failed to show up and never did. As a
+result, I took what he'd left (a database schema and a very minimal prototype)
+and built up and deployed an HTTP API to help us build out the new platform 
+which we later began to call ``Cufflink v3``. For reference, the API I built 
+was written in ``python`` and supported by the following libraries:
+
+- ``FastAPI`` - A type hint powered HTTP API framework.
+- ``SQLAlchemy`` - An SQL ORM for python.
+- ``Pydantic`` - A replacement for python ``dataclass`` using type hints.
+
+This API primarily talked to ``MySQL`` and had some scripts for running data 
+pipelines.
+
+For the first six months myself and the project manager for this project were 
+hardly holding the project together (we had two additional engineers, even 
+greener than I at the time, who required extensive assistance). After 
+prototyping, the API I'd developed was in acceptable state (tested, with 
+pipelines for CI, and working on a prototype URL for our UI developer) I 
+decided that it would be worth while to deploy with a more reproducible and 
+scalible means.
+
+To this end, I designed and implemented an actual production infrastructure 
+using ``terraform``. This had quite a learning curve, as I'd never worked in depth with 
+``azure`` *(or any cloud platform)* before, neither had I worked with 
+``terraform``. However, with some research, I managed to get it all working 
+and made it reasonably secure (later third party security assessments indicated 
+so). This consisted of a ``MySQL`` database, ``kubernetes`` cluster, and a 
+container registry. 
+
+With ``kubernetes`` at my disposal, I then wrote up helm charts for the 
+services we had at the time to make it trivial to deploy services in a 
+coordinated way. This went well and I had a great deal of fun with this. Some
+time around this point (after about 8 months working for ``MVE``) we decided to
+cut the aforementioned two developers and hired replacements. Hiring was fun
+and I gained some insight now being on the other side of the interview table.
+I was responsible for performing technical interviews. We hired two excellent 
+engineers who made my job significantly easier.
+
+Until I left, we continued to improve the software. I did not like that the 
+sales team (one person at the time) never let up on the software team, as it came
+across as micromanaging when they had failed in their job. It appeared that 
+we were developing features for customers who did not exist. I stood up for the 
+software team because it was unreasonable to continue as such. Soon after this,
+we mutually agreed to part ways.
+
+After this, I for the first had some freedom to enjoy my life as a result of 
+having my car (which I paid off in 14 months) and some money. I am taking this 
+time to refine my skills, develop this site, and develop ``captura``. To read 
+more about this subject matter, please see the links `on the home page </home>_`.
+
+
+Personal Interests
+-------------------------------------------------------------------------------
+
+I like lifting weights (what some people call 'Olympic weight lifting'), yoga,
+mountain biking, gardening, cooking, and my spending time with my friends and 
+family. I tend to frequent a few coffee shops and breweries, however I prefer 
+not to drink very often nowadays. In the past I've also made (and even sold) 
+some artwork - over the last few years my creative energy has been required in 
+software - eventually I'd like to host some artwork here.
+
+I made a commitment to having few screen based interests as I would rather not 
+be attached to one at all times, so I don't watch much television, any movies, 
+have stopped playing video games, and limit my time spent staring at my phone.
+I have considered content creation, however I am hesitant to get started with 
+it as it would maximize my screen time.
+
+.. Eventually, I would like to learn carpenty and masonry so I can 
+I have never viewed working for a 'company' as the end goal - rather I view it 
+as a stepping stone into my own entrepreneurial ventures and relative financial 
+freedom where I might explore my interests to the end of gaining further 
+finance.
+
