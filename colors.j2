@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://acederberg.io/index.css">
+    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link rel="shortcut icon" href="https://fastapi.tiangolo.com/img/favicon.png">
+    <title>Iterpolator</title>
+    <style>
+      .colorcard {
+        display: inline-block; 
+        width: 64px;
+        height: 64px;
+        padding: 8px;
+        margin: 8px;
+      }
+      .colorcard-container {
+        background: black;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <div class="wrapper">
+    <section>
+      <h1>Color Interpolator</h1>
+      <div class="colorcard-container">
+        {% for color in colors %}
+          <div 
+            class="colorcard" 
+            style="background: {{ color.hex }}"
+          >
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</html>
