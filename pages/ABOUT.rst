@@ -1,5 +1,11 @@
-Hello, My Name is Adrian Cederberg!
-===============================================================================
+.. container:: home-0
+
+   **Hello, I am**
+
+.. container:: home-1 
+
+   **Adrian Cederberg!**
+
 
 I am an engineer from Albuquerque, New Mexico. Lately I am interested in 
 writing software as I have found it to be an indispensable skill in the 
@@ -9,12 +15,12 @@ physics, and software.
 At the moment, I am working on ``captura``, an easy to extend sharing API 
 framework from which I intend to make a few other projects. I have also built 
 this blog site on top of ``captura``, and this document that you are reading is 
-actually stored in `captura <https://github.com/acederberg/captura` using 
-the `captura-text <https://github.com/acederberg/captura-text>` plugin. Raw 
-site content can be found in `another repo <https://github.com/acederberg/captura-text-portfolio-assets>`.
+actually stored in `captura <https://github.com/acederberg/captura>`_ using 
+the `captura-text <https://github.com/acederberg/captura-text>`_ plugin. Raw 
+site content can be found in `another repo <https://github.com/acederberg/captura-text-portfolio-assets>`_.
 
-For more about this site see `about this page </home#about>` and for a succinct
-statement of my professional experience see `my resume </resume>`.
+For more about this site see `about this page </home#about>`_ and for a succinct
+statement of my professional experience see `my resume </resume>`_.
 
 
 My Experience with Technologies
@@ -124,7 +130,7 @@ we mutually agreed to part ways.
 After this, I for the first had some freedom to enjoy my life as a result of 
 having my car (which I paid off in 14 months) and some money. I am taking this 
 time to refine my skills, develop this site, and develop ``captura``. To read 
-more about this subject matter, please see the links `on the home page </home>_`.
+more about this subject matter, please see the links `on the home page </home>`_.
 
 
 Personal Interests
@@ -143,7 +149,6 @@ have stopped playing video games, and limit my time spent staring at my phone.
 I have considered content creation, however I am hesitant to get started with 
 it as it would maximize my screen time.
 
-.. Eventually, I would like to learn carpenty and masonry so I can 
 I have never viewed working for a 'company' as the end goal - rather I view it 
 as a stepping stone into my own entrepreneurial ventures and relative financial 
 freedom where I might explore my interests to the end of gaining further 

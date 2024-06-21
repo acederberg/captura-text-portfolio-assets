@@ -4,10 +4,10 @@
 
 :root {
   --color-calendar-graph-day-bg: var(--background);
-  --color-calendar-graph-day-L1-bg: var(--nord7);
-  --color-calendar-graph-day-L2-bg: var(--nord8);
-  --color-calendar-graph-day-L3-bg: var(--nord9);
-  --color-calendar-graph-day-L4-bg: var(--nord10);
+  --color-calendar-graph-day-L4-bg: #a33bbe;
+  --color-calendar-graph-day-L3-bg: #822c92;
+  --color-calendar-graph-day-L2-bg: #621e67;
+  --color-calendar-graph-day-L1-bg: #491346;
 }
 
 .ContributionCalendar-day[data-level='0'] {

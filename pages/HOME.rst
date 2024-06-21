@@ -1,5 +1,5 @@
 .. ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-.. NOTE: DO NOT USE A TITLE! `<h1>` then uses an id that makes css a pain.
+.. NOTE: DO NOT USE RST TITLE! `<h1>` then uses an id that makes css a pain.
 .. container:: home-0
 
     **Hello, I am**
