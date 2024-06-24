@@ -7,42 +7,42 @@ data:
   documents:
     home.rst:
       description: Home
-      content_file: pages/HOME.rst
+      content_file: captura-text-assets/pages/HOME.rst
       format_in: rst
       format_out: rst
     about.rst:
       description: About
-      content_file: pages/ABOUT.rst
+      content_file: captura-text-assets/pages/ABOUT.rst
       format_in: rst
       format_out: rst
     resume.rst:
       description: Resume
-      content_file: pages/RESUME.rst
+      content_file: captura-text-assets/pages/RESUME.rst
       format_in: rst
       format_out: rst
     resume:
       description: Resume
-      content_file: pages/RESUME.rst
+      content_file: captura-text-assets/pages/RESUME.rst
       format_in: rst
       format_out: html
     home:
       description: Home
-      content_file: pages/HOME.rst
+      content_file: captura-text-assets/pages/HOME.rst
       format_in: rst
       format_out: html
     about:
       description: About
-      content_file: pages/ABOUT.rst
+      content_file: captura-text-assets/pages/ABOUT.rst
       format_in: rst
       format_out: html
     commits:
       description: Commits
-      content_file: pages/COMMITS.rst
+      content_file: captura-text-assets/pages/COMMITS.rst
       format_in: rst
       format_out: html
     projects:
       description: Commits
-      content_file: pages/PROJECTS.rst
+      content_file: captura-text-assets/pages/PROJECTS.rst
       format_in: rst 
       format_out: html
 
@@ -51,17 +51,17 @@ data:
 
     index.css:
       description: Commits
-      content_file: css/index.css
+      content_file: captura-text-assets/css/index.css
       format_in: css
       format_out: css
     nord.css:
       description: Nord
-      content_file: css/nord.css
+      content_file: captura-text-assets/css/nord.css
       format_in: css
       format_out: css
     commits.css:
       description: Nord
-      content_file: css/commits.css
+      content_file: captura-text-assets/css/commits.css
       format_in: css
       format_out: css
 
@@ -70,32 +70,32 @@ data:
 
     about.svg:
       description: About Icon
-      content_file: icons/about.svg
+      content_file: captura-text-assets/icons/about.svg
       format_in: svg
       format_out: svg
     database.svg:
       description: Database Icon
-      content_file: icons/database.svg
+      content_file: captura-text-assets/icons/database.svg
       format_in: svg
       format_out: svg
     document.svg:
       description: Database Icon
-      content_file: icons/document.svg
+      content_file: captura-text-assets/icons/document.svg
       format_in: svg
       format_out: svg
     copy.svg:
       description: Copy
-      content_file: icons/copy.svg
+      content_file: captura-text-assets/icons/copy.svg
       format_in: svg
       format_out: svg
     git.svg:
       description: Git Icon
-      content_file: icons/git.svg
+      content_file: captura-text-assets/icons/git.svg
       format_in: svg
       format_out: svg
     github.svg:
       description: Github Icon
-      content_file: icons/github.svg
+      content_file: captura-text-assets/icons/github.svg
       format_in: svg
       format_out: svg
 

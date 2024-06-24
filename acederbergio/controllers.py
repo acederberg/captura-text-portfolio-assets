@@ -1,3 +1,5 @@
+# NOTE: DO NOT IMPORT FROM THE CLIENT HERE! IF YOU WANT TO IMPORT FROM THE
+#       CLIENT MAKE A SEPARATE PACKAGE TO AVOID CIRCULAR IMPORT ERRORS!
 import functools
 import json
 import random
@@ -18,26 +20,10 @@ from typing import (
 import fastapi
 import typer
 import uvicorn
+from acederbergio.schemas import ColorSchema
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, TypeAdapter
 from rich.console import Console
-
-
-class ColorRGB(BaseModel):
-    r: int
-    g: int
-    b: int
-
-
-class ColorSchema(BaseModel):
-    rgb: ColorRGB
-    hex: str
-
-
-# NOTE: Use this when a user lands on the page.
-PRETTY_PAIRS = {
-    ("cd0ddc", "eb7616"),
-}
 
 
 # NOTE: See https://pypi.org/project/colour/.
@@ -156,134 +142,3 @@ class Color:
         while all(value < 256 for value in rbg) and k < steps_further:
             yield rbg
             rbg = rbg + diff
-
-
-def test_diff():
-    a = Color(0, 1, 2)
-    b = Color(128, 128, 128)
-    c = a - b
-
-    assert all(elem == index - 128 for index, elem in enumerate(c))
-
-
-def test_interpolate():
-    a = Color(0, 128, 0)
-    b = Color(0, 0, 0)
-
-    colors = list(a.interpolate(b, steps=128 // 8))
-    assert len(colors) == 16
-
-    for count, color in enumerate(colors):
-        assert color.r == color.b == 0
-        assert color.g == count * 8
-
-
-def create_fastapi():
-    app = fastapi.FastAPI()
-    templates = Jinja2Templates(path.realpath(path.dirname(__file__)))
-
-    def colors(
-        start: str = "#e9b863",
-        stop: str = "#9c79ec",
-        steps: int = 24,
-        random: bool = False,
-    ):
-
-        if random:
-            color_start, color_stop = Color.random(), Color.random()
-        else:
-            color_start = Color.fromHex(start)
-            color_stop = Color.fromHex(stop)
-
-        colors = color_start.interpolate(color_stop, steps=steps)
-        return list(colors)
-
-    DependsColors: TypeAlias = Annotated[
-        list[Color], fastapi.Depends(colors, use_cache=True)
-    ]
-
-    @app.get("/interpolate/json")
-    def interpolate_json(
-        colors: DependsColors,
-        as_hex: bool = True,
-    ):
-        if as_hex:
-            return list(item.hex for item in colors)
-        else:
-            return list(item.color_schema().model_dump(mode="json") for item in colors)
-
-    @app.get("/interpolate")
-    def interpolate(
-        request: fastapi.Request,
-        colors: DependsColors,
-        start: str = "#e9b863",
-        stop: str = "#9c79ec",
-        steps: int = 24,
-    ):
-        return templates.TemplateResponse(
-            request,
-            "colors.j2",
-            context=dict(
-                colors=colors,
-                steps=steps,
-                start=start,
-                stop=stop,
-            ),
-        )
-
-    return app
-
-
-def create_typer():
-    console = Console()
-    cli = typer.Typer()
-
-    @cli.command("parse-hex")
-    def cmd_hex(hex: str):
-
-        color = Color.fromHex(hex)
-        console.print_json(json.dumps(color.color_schema().model_dump(mode="json")))
-
-    @cli.command("parse-vector")
-    def cmd_rgb(red: int, blue: int, green: int):
-
-        color = Color(red, blue, green)
-        console.print_json(json.dumps(color.color_schema().model_dump(mode="json")))
-
-    @cli.command("interpolate")
-    def cmd_interpolate(
-        hex_start: str,
-        hex_stop: str,
-        *,
-        steps: int = 5,
-        steps_further: Optional[int] = None,
-        as_hex: bool = True,
-    ):
-
-        start = Color.fromHex(hex_start)
-        stop = Color.fromHex(hex_stop)
-
-        colors = start.interpolate(
-            stop,
-            steps=steps,
-            steps_further=steps_further,
-        )
-
-        if as_hex:
-            colors = list(item.hex for item in colors)
-        else:
-            colors = list(
-                item.color_schema().model_dump(mode="json") for item in colors
-            )
-        console.print_json(json.dumps(colors))
-
-    @cli.command("run")
-    def cmd_run():
-        uvicorn.run("gencolors:create_fastapi", reload=True)
-
-    return cli
-
-
-if __name__ == "__main__":
-    cli = create_typer()
-    cli()
