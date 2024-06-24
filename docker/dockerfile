@@ -1,0 +1,3 @@
+FROM acederberg/captura-text:0.1.0-alpha AS production
+COPY --chown=captura:captura . ./plugins/acederbergio
+RUN bash /home/captura/docker.sh plugins >> /home/captura/.captura/logs/ci.log
