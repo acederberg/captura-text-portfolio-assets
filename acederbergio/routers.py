@@ -1,5 +1,6 @@
 # NOTE: DO NOT IMPORT FROM THE CLIENT HERE! IF YOU WANT TO IMPORT FROM THE
 #       CLIENT MAKE A SEPARATE PACKAGE TO AVOID CIRCULAR IMPORT ERRORS!
+# =========================================================================== #
 from os import path
 from typing import Annotated, TypeAlias
 
@@ -37,8 +38,13 @@ DependsColors: TypeAlias = Annotated[
 
 
 class ColorView(BaseView):
-    views_templates = Jinja2Templates(path.realpath(path.dirname(__file__)))
-    views_routers = dict(
+    view_templates = Jinja2Templates(
+        path.join(
+            path.realpath(path.dirname(__file__)),
+            "templates",
+        )
+    )
+    view_routes = dict(
         get_interpolate_json="/interpolate/json",
         get_interpolate="/interpolate",
     )
@@ -63,7 +69,7 @@ class ColorView(BaseView):
         stop: str = "#9c79ec",
         steps: int = 24,
     ):
-        return cls.views_templates.TemplateResponse(
+        return cls.view_templates.TemplateResponse(
             request,
             "colors.j2",
             context=dict(

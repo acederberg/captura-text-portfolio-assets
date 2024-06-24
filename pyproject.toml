@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+authors = [{name = "Adrian Cederberg", email = "adrn.cederberg123@gmail.com"}, ]
+name = "acederbergio"
+version = "0.0.0"
+description = "Portfolio for 'https://github.com/acederberg'."
+readme = "README.rst"
+keywords = ["captura", "text", "web", "portfolio"]
+
+
+classifiers = [
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.11',
+    'Intended Audience :: Developers',
+    'Topic :: Internet',
+]
+
+
+
+[tool.setuptools]
+packages = ["acederbergio"]
+
+
+[tool.black]
+
+
+# NOTE: See the documentation for the various configuration fields here:
+#
+#       .. code:: txt
+#
+#           https://pycqa.github.io/isort/docs/configuration/options.html
+#
+# NOTE: Does not support multiline headings. Is not indempotent.
+[tool.isort]
+profile = "black"
+import_heading_stdlib = "=========================================================================== #"
+import_heading_firstparty = "--------------------------------------------------------------------------- #" #\n# Captura\n"
+skip = [".venv-local", ".venv"]
+src_paths = ["src", "tests"]
+
