@@ -83,6 +83,11 @@ data:
       content_file: icons/document.svg
       format_in: svg
       format_out: svg
+    copy.svg:
+      description: Copy
+      content_file: icons/copy.svg
+      format_in: svg
+      format_out: svg
     git.svg:
       description: Git Icon
       content_file: icons/git.svg

@@ -1,3 +1,4 @@
+import functools
 import json
 import random
 from os import path
@@ -31,6 +32,12 @@ class ColorRGB(BaseModel):
 class ColorSchema(BaseModel):
     rgb: ColorRGB
     hex: str
+
+
+# NOTE: Use this when a user lands on the page.
+PRETTY_PAIRS = {
+    ("cd0ddc", "eb7616"),
+}
 
 
 # NOTE: See https://pypi.org/project/colour/.
@@ -176,17 +183,24 @@ def create_fastapi():
     templates = Jinja2Templates(path.realpath(path.dirname(__file__)))
 
     def colors(
-        start: str | None = None,
-        stop: str | None = None,
-        steps: int = 8,
+        start: str = "#e9b863",
+        stop: str = "#9c79ec",
+        steps: int = 24,
+        random: bool = False,
     ):
 
-        color_start = Color.fromHex(start) if start is not None else Color.random()
-        color_stop = Color.fromHex(stop) if stop is not None else Color.random()
-        colors = color_start.interpolate(color_stop, steps=steps)
-        return colors
+        if random:
+            color_start, color_stop = Color.random(), Color.random()
+        else:
+            color_start = Color.fromHex(start)
+            color_stop = Color.fromHex(stop)
 
-    DependsColors: TypeAlias = Annotated[list[Color], fastapi.Depends(colors)]
+        colors = color_start.interpolate(color_stop, steps=steps)
+        return list(colors)
+
+    DependsColors: TypeAlias = Annotated[
+        list[Color], fastapi.Depends(colors, use_cache=True)
+    ]
 
     @app.get("/interpolate/json")
     def interpolate_json(
@@ -199,11 +213,22 @@ def create_fastapi():
             return list(item.color_schema().model_dump(mode="json") for item in colors)
 
     @app.get("/interpolate")
-    def interpolate(request: fastapi.Request, colors: DependsColors):
+    def interpolate(
+        request: fastapi.Request,
+        colors: DependsColors,
+        start: str = "#e9b863",
+        stop: str = "#9c79ec",
+        steps: int = 24,
+    ):
         return templates.TemplateResponse(
             request,
             "colors.j2",
-            context=dict(colors=colors),
+            context=dict(
+                colors=colors,
+                steps=steps,
+                start=start,
+                stop=stop,
+            ),
         )
 
     return app
@@ -254,8 +279,7 @@ def create_typer():
 
     @cli.command("run")
     def cmd_run():
-        app = create_fastapi()
-        uvicorn.run(app)
+        uvicorn.run("gencolors:create_fastapi", reload=True)
 
     return cli
 
