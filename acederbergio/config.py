@@ -8,3 +8,7 @@ PATH_TEMPLATES = environ.get(
     "ACEDERBERG_IO_TEMPLATES",
     default=path.join(PATH_ROOT, "templates"),
 )
+
+# ROUTER_PREFIX: Annotated[
+#     str, Doc("This helps ``/interpolate`` know where to redirect." "")
+# ] = ""

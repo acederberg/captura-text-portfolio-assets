@@ -225,16 +225,16 @@
     <br>
     <section id="color-interpolator">
       <div class="color-card-controls">
-        <form action="/interpolate" id="color-card-controls-left" method="GET">
+        <form action="{{ request.url.path }}" id="color-card-controls-left" method="GET">
           <label for="start">Start</label><input value={{ start or "#ffffff" }} name="start" type="color"></input>
           <label for="stop">Stop</label><input value={{ stop or "#000000" }} name="stop" type="color"></input>
           <label for="steps">Steps</label><input value={{ steps or 8 }} name="steps" type="number"></input>
-          <input name="submit" type="submit"></input>
+          <input type="submit" value="Create"></input>
         </form>
-        <form action="/interpolate" id="color-card-controls-right">
+        <form action="{{ request.url.path }}" id="color-card-controls-right">
           <label for="steps">Steps</label><input value={{ steps }} name="steps" type="number"></input>
           <input value=1 name="random" hidden=1></input>
-          <input name="submit" type="submit" value="Random"></input>
+          <input type="submit" value="Random"></input>
         </form>
       </div>
       <br>
