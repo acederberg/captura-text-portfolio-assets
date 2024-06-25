@@ -159,6 +159,7 @@ class Gradient:
 
         k = 0
         rbg = stop
-        while all(value < 256 for value in rbg) and k < self.steps_further:
+        while k < self.steps_further:
+            if not all(a + b < 256 for a, b in zip(diff, rbg)):
+                break
             yield rbg
-            rbg = rbg + diff
