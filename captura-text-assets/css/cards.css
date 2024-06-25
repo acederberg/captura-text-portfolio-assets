@@ -1,0 +1,95 @@
+@media (max-width: 768px) {
+  :root {
+    --card-height: 128px;
+    --card-padding: 4px;
+    --card-margin: 4px;
+    --card-cell-columns: 4;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --card-height: 144px;
+    --card-padding: 6px;
+    --card-margin: 6px;
+    --card-cell-columns: 4;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1536px) {
+  :root {
+    --card-height: 160px;
+    --card-padding: 8px;
+    --card-margin: 8px;
+    --card-cell-columns: 5;
+  }
+}
+
+
+@media (min-width: 1536px) {
+  :root {
+    --card-height: 176px;
+    --card-padding: 10px;
+    --card-margin: 10px;
+    --card-cell-columns: 6;
+  }
+}
+
+:root {
+  /* Shadows */
+  --card-shadow-color: rgba(0, 0, 0, .3);
+  --card-shadow-color-hover: rgba(0, 0, 0, .2);
+
+  /* Derived */
+  --card-width: var(--card-height);
+  --card-cell-size: calc(2 * (var(--card-padding) + var(--card-margin)) + var(--card-height));
+}
+
+/* ------------------------------------------------------------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--card-cell-columns), var(--card-cell-size));
+  grid-template-rows: repeat(auto, var(--card-cell-size));
+}
+
+.card {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: var(--card-height);
+  height: var(--card-height);
+  padding: var(--card-padding);
+  margin: var(--card-margin);
+  transition: all .4s ease;
+
+  box-shadow: 8px 28px 50px var(--card-shadow-color);
+}
+
+.card:hover {
+  z-index: 1;
+  transform: translate3D(0, -1px, 0) scale(1.1);
+
+  box-shadow: 16px 36px 58px var(--card-shadow-color-hover);
+}
+
+.card p {
+  filter: invert(100%) sepia(2%) saturate(1401%) hue-rotate(187deg) brightness(99%) contrast(85%);
+}
+
+.card p img {
+  height: 1em;
+  filter: invert(100%) sepia(2%) saturate(1401%) hue-rotate(187deg) brightness(99%) contrast(85%);
+  mix-blend-mode: difference;
+}
+
+.card p img:hover {
+  z-index: 2;
+  transform: translate3D(0, -1px, 0) scale(1.2);
+
+  box-shadow: 16px 36px 58px var(--card-shadow-color-hover);
+  height: 1.1em;
+}

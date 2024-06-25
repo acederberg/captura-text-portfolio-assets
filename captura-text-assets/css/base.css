@@ -1,0 +1,67 @@
+/* This should be includable in any css defined here, do not import in here */
+
+:root {
+  --background: #200f0f;
+  --background1: #301f1f;
+  --background2: #402f2f;
+
+  /* Borders */
+  --standard-border-large-width: 4px;
+  --standard-border-small-width: 1px;
+  --standard-border-large: var(--standard-border-large-width) solid var(--background1);
+  --standard-border-large-half: calc(var(--standard-border-large-width) / 2) solid var(--background1);
+  --standard-border-small: var(--standard-border-small-width) solid var(--background2);
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Min 2/3 width, max 1/2 width */
+@media (max-width: 768px) {
+  :root {
+    --wrapper-max-width: 384px;
+    --wrapper-margin: 16px;
+  }
+
+  body {
+    font-size: small;
+  }
+}
+
+
+/* + 64px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --wrapper-max-width: 512px;
+    --wrapper-margin: 32px;
+  }
+
+  body {
+    font-size: medium;
+  }
+}
+
+
+/* + 128px */
+@media (min-width: 1024px) and (max-width: 1536px) {
+
+  :root {
+    --wrapper-max-width: 768px;
+    --wrapper-margin: 64px;
+  }
+
+  body {
+    font-size: medium;
+  }
+}
+
+
+@media (min-width: 1536px) {
+  :root {
+    --wrapper-max-width: 1024px;
+    --wrapper-margin: 128px;
+  }
+
+  body {
+    font-size: large;
+  }
+}

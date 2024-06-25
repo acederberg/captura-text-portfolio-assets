@@ -125,22 +125,40 @@ class Color:
     def color_schema(self) -> ColorSchema:
         return ColorSchema(rgb=self.rgb, hex=self.hex)  # type: ignore
 
-    # class ColorGradient:
-    def interpolate(
+
+class Gradient:
+
+    start: Color
+    stop: Color
+    steps: int
+    steps_further: int | None
+
+    def __init__(
         self,
-        to: Self,
-        *,
-        steps: int = 5,
+        start: Color,
+        stop: Color,
+        steps: int = 24,
         steps_further: int | None = None,
-    ) -> Generator[Self, None, None]:
-        diff = (self - to).scale(1 / steps)
-        yield from (self + diff.scale(step) for step in range(steps))
-        if not steps_further:
-            yield to
+    ):
+
+        self.start = start
+        self.stop = stop
+        self.steps = steps
+        self.steps_further = steps_further
+
+    def __iter__(
+        self,
+    ) -> Generator[Color, None, None]:
+
+        start, stop, steps = self.start, self.stop, self.steps
+        diff = (start - stop).scale(1 / steps)
+        yield from (start + diff.scale(step) for step in range(steps))
+        if self.steps_further is None:
+            yield stop
             return
 
         k = 0
-        rbg = to
-        while all(value < 256 for value in rbg) and k < steps_further:
+        rbg = stop
+        while all(value < 256 for value in rbg) and k < self.steps_further:
             yield rbg
             rbg = rbg + diff

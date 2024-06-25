@@ -49,8 +49,33 @@ data:
     # ----------------------------------------------------------------------- #
     # NOTE: CSS
 
-    index.css:
+    base.css:
+      description: Base
+      content_file: captura-text-assets/css/base.css
+      format_in: css
+      format_out: css
+    cards.css:
+      description: Cards
+      content_file: captura-text-assets/css/cards.css
+      format_in: css
+      format_out: css
+    colors.css:
+      description: Colors
+      content_file: captura-text-assets/css/colors.css
+      format_in: css
+      format_out: css
+    commits.css:
       description: Commits
+      content_file: captura-text-assets/css/commits.css
+      format_in: css
+      format_out: css
+    home.css:
+      description: Home
+      content_file: captura-text-assets/css/home.css
+      format_in: css
+      format_out: css
+    index.css:
+      description: Index
       content_file: captura-text-assets/css/index.css
       format_in: css
       format_out: css
@@ -59,11 +84,7 @@ data:
       content_file: captura-text-assets/css/nord.css
       format_in: css
       format_out: css
-    commits.css:
-      description: Nord
-      content_file: captura-text-assets/css/commits.css
-      format_in: css
-      format_out: css
+
 
     # ----------------------------------------------------------------------- #
     # NOTE: SVG

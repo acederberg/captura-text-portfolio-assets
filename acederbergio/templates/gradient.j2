@@ -1,0 +1,56 @@
+<!-- vi: set ft=htmldjango -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://acederberg.io/index.css">
+    <link rel="stylesheet" type="text/css" href="https://acederberg.io/colors.css">
+    <link rel="shortcut icon" href="https://fastapi.tiangolo.com/img/favicon.png">
+    <title>Gradient</title>
+    <style>
+    </style>
+  </head>
+  <div class="color-wrapper">
+    <section id="gradient-info">
+      <h1>Color Gradient</h1>
+      <p>
+        This is a little demo project to practice building basic 'reactive like'
+        webpages. I wanted to do this since <tt>react</tt> has been a crutch of 
+        mine. This page is a <tt>Jinja</tt> template rendered by <tt>FastAPI</tt> that uses 
+        the below forms to redirect to a rerendering of the same page.
+      </p>
+    </section>
+    <br>
+    <section id="gradient">
+      <div class="gradient-controls">
+        <form action="{{ request.url.path }}" id="grandient-controls-left" method="GET">
+          <label for="start">Start</label><input value={{ gradient.start.hex }} name="start" type="color"></input>
+          <label for="stop">Stop</label><input value={{ gradient.stop.hex  }} name="stop" type="color"></input>
+          <label for="steps">Steps</label><input value={{ gradient.steps }} name="steps" type="number"></input>
+          <input type="submit" value="Create"></input>
+        </form>
+        <form action="{{ request.url.path }}" id="grandient-controls-right">
+          <label for="steps">Steps</label><input value={{ gradient.steps }} name="steps" type="number"></input>
+          <input value=1 name="random" hidden=1></input>
+          <input type="submit" value="Random"></input>
+        </form>
+      </div>
+      <br>
+      <div class="card-container">
+        <div class="card-grid">
+          {% for color in gradient %}
+            <div class="card" style="background-color: {{ color.hex }}">
+              <p><img 
+                src="https://acederberg.io/copy.svg"
+                alt="copy"
+              ></img>{{ color.hex }}</p>
+              <p>
+              <img 
+                src="https://acederberg.io/copy.svg"
+                alt="copy"
+              ></img>rgb({{ color.r }}, {{ color.g }}, {{ color.b }})</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </div>
+</html>

@@ -1,0 +1,95 @@
+:root {
+  /* Borders */
+  --form-item-height: 64px;
+  --form-item-width: 64px;
+  --form-item-padding: 8px;
+  --form-item-margin: 8px;
+
+  --color-controls-height: calc(var(--card-height) / 2);
+  --gradient-width: calc(var(--card-cell-size) * var(--card-cell-columns));
+  --color-controls-width: calc(var(--gradient-width) - 2 * (var(--card-padding) + var(--card-margin)));
+}
+
+
+/* ------------------------------------------------------------------- */
+
+.gradient-controls {
+  padding: var(--card-padding);
+  margin: var(--card-padding);
+  height: var(--color-controls-height);
+  width: calc(var(--color-controls-width) - 6px);
+
+  border: var(--standard-border-large);
+  border-color: var(--background);
+}
+
+#gradient-controls-left {
+  border-right: var(--standard-border-large-half);
+  border-color: var(--background);
+
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+#gradient-controls-right {
+  border-left: var(--standard-border-large-half);
+  border-color: var(--background);
+
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.gradient-controls form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: var(--color-controls-height);
+  width: calc(var(--color-controls-width) / 2);
+  padding: var(--card-padding) 0px var(--card-padding) 0px;
+  margin: var(--card-padding) 0px var(--card-padding) 0px;
+}
+
+.gradient-controls form input {
+  background-color: #301f1f;
+  border: 1px solid #402f2f;
+
+  height: var(--form-item-height);
+  width: var(--form-item-width);
+  margin: var(--form-item-margin);
+  padding: var(--form-item-padding);
+
+  color: var(--nord5);
+  text-align: center;
+}
+
+.gradient-controls form input[type="submit"] {
+  transition: all .4s ease;
+}
+
+.gradient-controls form input[type="submit"]:hover {
+  z-index: 1;
+  transform: translate3D(0, -1px, 0) scale(1.1);
+  box-shadow: 16px 36px 58px var(--card-shadow-color-hover);
+}
+
+/* ------------------------------------------------------------------- */
+
+#gradient-info h1,
+#gradient>* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gradient,
+#gradient-info {
+  width: var(--gradient-width);
+}
+
+.color-wrapper {
+  max-width: var(--gradient-width);
+  margin: auto;
+  margin-bottom: var(--wrapper-margin);
+  margin-top: var(--wrapper-margin);
+}
