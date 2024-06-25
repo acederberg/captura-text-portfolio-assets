@@ -1,5 +1,6 @@
 # NOTE: DO NOT IMPORT FROM THE CLIENT HERE! IF YOU WANT TO IMPORT FROM THE
 #       CLIENT MAKE A SEPARATE PACKAGE TO AVOID CIRCULAR IMPORT ERRORS!
+# =========================================================================== #
 import functools
 import json
 import random
@@ -124,6 +125,7 @@ class Color:
     def color_schema(self) -> ColorSchema:
         return ColorSchema(rgb=self.rgb, hex=self.hex)  # type: ignore
 
+    # class ColorGradient:
     def interpolate(
         self,
         to: Self,

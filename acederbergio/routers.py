@@ -5,12 +5,14 @@ from os import path
 from typing import Annotated, TypeAlias
 
 import fastapi
+from acederbergio import config
 from acederbergio.controllers import Color
 from app.views.base import BaseView
 from fastapi.templating import Jinja2Templates
 
 PRETTY_PAIRS = {
     ("cd0ddc", "eb7616"),
+    ("e9b864", "9c79ec"),
 }
 
 
@@ -38,12 +40,7 @@ DependsColors: TypeAlias = Annotated[
 
 
 class ColorView(BaseView):
-    view_templates = Jinja2Templates(
-        path.join(
-            path.realpath(path.dirname(__file__)),
-            "templates",
-        )
-    )
+    view_templates = Jinja2Templates(config.PATH_TEMPLATES)
     view_routes = dict(
         get_interpolate_json="/interpolate/json",
         get_interpolate="/interpolate",
@@ -79,3 +76,11 @@ class ColorView(BaseView):
                 stop=stop,
             ),
         )
+
+    @classmethod
+    def get_builder(
+        cls,
+        request: fastapi.Request,
+    ):
+        """Get the pallete builder app."""
+        ...
