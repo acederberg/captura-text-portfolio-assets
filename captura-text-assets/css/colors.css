@@ -51,8 +51,8 @@
 }
 
 .gradient-controls form input {
-  background-color: #301f1f;
-  border: 1px solid #402f2f;
+  background: var(--background);
+  border: none;
 
   height: var(--form-item-height);
   width: var(--form-item-width);
@@ -63,7 +63,18 @@
   text-align: center;
 }
 
+.gradient-controls form label {
+  border: none;
+  border-left: 1px solid var(--background1);
+}
+
+.gradient-controls form input[type="number"] {
+  border: var(--standard-border-small);
+}
+
+
 .gradient-controls form input[type="submit"] {
+  border: var(--standard-border-small);
   transition: all .4s ease;
 }
 

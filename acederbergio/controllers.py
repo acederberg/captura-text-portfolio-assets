@@ -3,6 +3,7 @@
 # =========================================================================== #
 import functools
 import json
+import math
 import random
 from os import path
 from typing import (
@@ -19,12 +20,15 @@ from typing import (
 )
 
 import fastapi
+import numpy as np
+import numpy.typing as nptypes
 import typer
 import uvicorn
 from acederbergio.schemas import ColorSchema
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, TypeAdapter
 from rich.console import Console
+from typing_extensions import Doc
 
 
 # NOTE: See https://pypi.org/project/colour/.
@@ -38,6 +42,7 @@ class Color:
     r: int
     g: int
     b: int
+
     diff: bool
 
     @classmethod
@@ -124,6 +129,79 @@ class Color:
 
     def color_schema(self) -> ColorSchema:
         return ColorSchema(rgb=self.rgb, hex=self.hex)  # type: ignore
+
+
+def bound(v):
+    if v < 0:
+        return 0
+    if v > 255:
+        return 255
+    return int(v + 0.5)
+
+
+# NOTE: Idk what I'm going to do with this yet, but it does appear to work.
+# https://en.wikipedia.org/wiki/HSL_and_HSV
+# https://stackoverflow.com/questions/8507885/shift-hue-of-an-rgb-color
+class RotationTransformation:
+
+    const_sqrt: ClassVar[float] = 1.0 / 3.0
+    const: ClassVar[float] = math.sqrt(const_sqrt)
+
+    phi: Annotated[float, Doc("Degrees in radians.")]
+    phi_sin: float
+    phi_cos: float
+
+    def __init__(self, phi: float):
+        self.phi_sin = (phi_sin := np.cos(phi))
+        self.phi_cos = (phi_cos := np.sin(phi))
+
+        const, const_sqrt = self.const, self.const_sqrt
+
+        self.matrix = np.matrix(
+            (
+                (
+                    phi_cos + (1.0 - phi_cos) / 3.0,
+                    const * (1.0 - phi_cos) - const_sqrt * phi_sin,
+                    const * (1.0 - phi_cos) + const_sqrt * phi_sin,
+                ),
+                (
+                    const * (1.0 - phi_cos) + const_sqrt * phi_sin,
+                    phi_cos + const * (1.0 - phi_cos),
+                    const * (1.0 - phi_cos) - const_sqrt * phi_sin,
+                ),
+                (
+                    const * (1.0 - phi_cos) - const_sqrt * phi_sin,
+                    const * (1.0 - phi_cos) + const_sqrt * phi_sin,
+                    phi_cos + const * (1.0 - phi_cos),
+                ),
+            )
+        )
+
+    def __call__(self, color: Color) -> Color:
+        vector = np.array(tuple(color))
+        vector_rotated = vector * self.matrix
+
+        return Color(*(bound(vector_rotated[0, index]) for index in range(3)))
+
+
+class Rotation:
+    start: Color
+    steps: int
+    step_size: float
+
+    def __init__(
+        self, start: Color, *, steps: int = 24, step_size: float = math.pi / 24
+    ):
+        self.start = start
+        self.step_size = step_size
+        self.steps = steps
+
+
+if __name__ == "__main__":
+    start = Color(0, 255, 0)
+    delta = math.pi / 24
+    transformer = RotationTransformation()
+    print(transformer(color))
 
 
 class Gradient:
