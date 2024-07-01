@@ -1,16 +1,10 @@
-.. container:: home-0
+About 
+===============================================================================
 
-   **Hello, I am**
-
-.. container:: home-1 
-
-   **Adrian Cederberg!**
-
-
-I am an engineer from Albuquerque, New Mexico. Lately I am interested in 
-writing software as I have found it to be an indispensable skill in the 
-various pursue that interest me. My technical interests include mathematics,
-physics, and software. 
+Hello, I am Adrian Cederberg! I am an engineer from Albuquerque, New Mexico. 
+Lately I am interested in writing software as I have found it to be an 
+indispensable skill in the various pursue that interest me. My technical 
+interests include mathematics, physics, and software. 
 
 At the moment, I am working on ``captura``, an easy to extend sharing API 
 framework from which I intend to make a few other projects. I have also built 
@@ -26,9 +20,10 @@ statement of my professional experience see `my resume </resume>`_.
 My Experience with Technologies
 -------------------------------------------------------------------------------
 
-I first found my interest in computers as a young teenager. I played around by
-jailbreaking my iPod, HTML sheets, and more. Eventually, I forgot about this 
-as I had other interests (principally music and sport). 
+I first found my interest in computers as a young teenager, where I played around 
+jail-breaking my iPod, basic browser stuff using HTML sheets and java-script, 
+and more. Eventually, I forgot about this as I had other interests (principally 
+music and sport). 
 
 About two years into college (while getting my applied mathematics degree) I 
 had to take a class in ``Matlab``. I found ``Matlab`` to be very easy to pick up and 
@@ -40,16 +35,20 @@ To this end, I decided that it would make more sense to learn python as it did
 not have the aforementioned limitations. Python was easy to learn, get started
 with, and build basic scripts with. Further, I liked that I did not have to use
 the ``Matlab`` IDE. Eventually, I took a course in python at UNM where I gained some 
-more formal knowledge of code and software. 
+more formal knowledge of 'coding' and software by taking a course in ``python``.
+Ironically the class was to be about ``matlab`` initially (and I was therefore
+dreading wasting my time) and then switched to ``python``, to my delight.
 
 I further honed my skills working as a research assistant by building and 
-programming drivers for devices to record experimental data consisting of magnetic (vector)
-fields as well as plotting and maintaining this data. 
+programming drivers for devices to record experimental data consisting of 
+magnetic (vector) fields as well as plotting and maintaining this data. 
 
 In spring 2020 I decided to leave graduate school after only one semester as
-it was silly to pay the universities exorbitant fees for online classes.
-At this point, I had decided that software was my most marketable skill and 
-that I wanted to go forth and make a living.
+it was silly to pay the universities exorbitant fees for online classes. I did
+not have to pay directly for school; however, it was considered to be part of 
+my pay as a researcher. I was disillusioned about school and would rather have
+the money directly at my disposal. At this point, I had decided that software 
+was my most marketable skill and that I wanted to go forth and make a living.
 
 For a while I'd entertained the idea of taking a deep dive into this subject
 matter as I found it compelling, entertaining, and useful. For these reasons

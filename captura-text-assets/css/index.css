@@ -52,15 +52,9 @@ h6 {
   color: var(--nord14);
 }
 
-body {
-  background: var(--background);
-}
-
 .wrapper {
   max-width: var(--wrapper-max-width);
-  background: null;
   margin: auto;
-  margin-bottom: var(--wrapper-margin);
-  margin-top: var(--wrapper-margin);
-  /* background: var(--nord1); */
+  padding-bottom: var(--wrapper-margin);
+  padding-top: var(--wrapper-margin);
 }

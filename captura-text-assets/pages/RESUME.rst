@@ -20,7 +20,7 @@ Education
 
 -------------------------------------------------------------------------------
 
-Relevent Work
+Relevant Work
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -35,7 +35,6 @@ is in its very initial phase.
 
 - Designed, implemented, tested, and deployed ``captura``. To learn more about 
   captura and get a demo, check out the `captura demo <captura.acederbebrg.io>`_.
-- See the captura 
 - Deployed captura to linode using pulumi and python (IaC, CI/CD).
 - Kept to a schedule   without external management.
 

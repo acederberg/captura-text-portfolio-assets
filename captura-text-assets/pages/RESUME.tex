@@ -1,0 +1,196 @@
+\documentclass{article}
+    \usepackage[margin=0.7in]{geometry}
+    \usepackage[parfill]{parskip}
+    \usepackage[utf8]{inputenc}
+    \usepackage{hyperref}
+    
+    % Related to math
+    \usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\begin{document}
+
+% NOTE: See 
+% - centering: https://tex.stackexchange.com/questions/23650/when-should-we-use-begincenter-instead-of-centering
+% - subheadings: https://tex.stackexchange.com/questions/417429/how-to-make-subheadings
+\newcommand{\chapsubhead}[1]{{ \begin{center}\Large #1 \vspace{2ex} \end{center} }}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\phantomsection\label{adrian-cederberg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+    \section*{Adrian Cederberg}
+\end{center}
+
+\chapsubhead{
+    adrn.cederberg123@gmail.com
+    \textbar{} \href{https://github.com/acederberg}{Github} \textbar{}
+    \href{https://acederberg.io}{acederberg.io}
+}
+
+\begin{center}
+\section*{Education}\label{education}
+\end{center}
+\textbf{University of New Mexico, Spring 2015 - Fall 2019}
+\begin{itemize}
+\tightlist
+\item[--]
+  Bachelors of Science in applied mathematics (GPA 3.3) - Minor in chemistry.
+\item[--]
+  Worked as a grader, tutor, and researcher. Got my first tastes of software development with \texttt{matlab} and \texttt{python}.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+    \section*{Relevant Work}\label{relevant-work}
+\end{center}
+
+Read more about my recent projects \href{https://acederberg.io/home}{on my portfolio} or \href{https://github.com/acederberg}{on github}. This document is meant to be a synopsis and everything will not fit - and either of these resources will tell you more about my capabilities than this document ever could.
+
+% --------------------------------------------------------------------------- %
+\subsection*{\texorpdfstring{Founder \textbar{}  \texttt{Captura} and
+\texttt{acederberg.io}}{Founder | Captura and acederberg.io}}\label{founder-of-captura-and-acederberg.io}
+
+\textbf{January 2024 - Now}
+
+My personal projects which I intend to use to grow a business and apply for a new job. 
+
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Designed, implemented, tested, and deployed \texttt{Captura} using \texttt{fastapi}, \texttt{sqlalchemy}, \texttt{pydantic}, and \texttt{docker}. To learn
+  more about \texttt{Captura} and get a demo, check out the
+  \href{https://captura.acederbebrg.io}{Captura demo} or run the \texttt{docker-compose} project in the \href{https://github.com/acederberg/captura}{github repository}. Designed the \href{https://github.com/acederberg/captura-text}{captura-text} plugin to serve web assets that may be collaborated upon.
+\item[--]
+  Implemented infrastructure as code and continuous integration and deployment for \texttt{Captura} to \texttt{linode} using \texttt{pulumi} and \texttt{python}. Implemented \texttt{SSL} termination using \texttt{traefik}, \texttt{let's encrypt} ACME certificates, and \texttt{porkbun API} automation. Code is host on \texttt{github} but is only available upon request since I'd rather have deployment be opaque for the time being.
+\item[--]
+  Built \href{https://acederberg.io/home}{acederberg.io} using the \href{https://github.com/acederberg/captura-text}{captura-text} plugin and added some simple projects for visitors to enjoy in the browser.
+\item[--]
+  Maintained and published \href{https://github.com/acederberg/yaml-settings-pydantic}{a little \texttt{yaml configuration} library}. Added features, addressed issues, and tested.
+
+\end{itemize}
+
+% --------------------------------------------------------------------------- %
+\subsection*{Software Engineer and Senior Software Engineer \textbar{}
+Mountain Vector
+Energy}\label{software-engineer-and-senior-software-engineer-mountain-vector-energy}
+
+\textbf{January 2022 - December 2023}
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Collaborated with 3 to 4 other developers to design, implement, maintain,
+  and deploy \texttt{Cufflink} Software as a Service from almost nothing. Assisted those struggling with their work (when they existed), contributed to \texttt{Cufflink} client and admin dashboards within the \texttt{react} and \texttt{next} frameworks, and wrote the \texttt{Cufflink API}.
+\item[--]
+  Bootstrapped the \texttt{Cufflink API} from former CTOs notes/prototype when
+  he unexpectedly quit (right when I started). Used \texttt{FastAPI}, \texttt{SQLAlchemy}, and \texttt{Pydantic}. Wrote data pipelines, managed databases, resolved bugs, and added features. Implemented \texttt{Auth0} authentication.
+\item[--]
+  Developed infrastructure as code using \texttt{terraform} on \texttt{azure} and designed \texttt{helm} charts for \texttt{Cufflink} services. Managed and debugged services in \texttt{kubernetes}. Built \texttt{bitbucket} pipelines for various repositories and implemented/maintained
+  continuous integration and deployment. Maintained service up-time and reliability.
+\item[--]
+  Used \texttt{atlassian jira} to track progress, keep notes, and assign issues.
+\item[--]
+  Performed technical interviews to hire two software engineers.
+\end{itemize}
+
+% --------------------------------------------------------------------------- %
+\subsection*{Developer and Devops Engineer \textbar{} My Portfolio and
+Self-Study}\label{developer-and-devops-engineer-my-portfolio-and-self-study}
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Studied software 50+ hours a week because I wanted a job in the subject matter. Starting January 2021 and continuing until January
+  2022.
+\item[--]
+  Built a portfolio using \texttt{flask} and deployed it with
+  \texttt{ansible} and \texttt{docker-compose}. Code is available upon request.
+\end{itemize}
+
+% --------------------------------------------------------------------------- %
+\subsection*{Research Assistant \textbar{} University of New Mexico
+Department of Mechanical
+Engineering}\label{research-assistant-university-of-new-mexico-department-of-mechanical-engineering}
+
+\textbf{Summer 2019 - Winter 2020}
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Collaborated with Craig Davidson of Dark Sea Industries to develop and
+  document relatively efficient air plasma production using
+  magnetohydrodynamic methods.
+\item[--]
+  Built and programmed sensor arrays using Raspberry and Arduino and
+  wrote drivers in \texttt{python} and \texttt{c}.
+\item[--]
+  Processed experimental data using python to generate graphs.
+  Interpreted spectrometer data using Python to increase productivity.
+  Built various components for experimental setup including a power
+  supply array.
+\end{itemize}
+
+% --------------------------------------------------------------------------- %
+\subsection*{Grader \textbar{} University of New Mexico Department of
+Mathematics}\label{grader-university-of-new-mexico-department-of-mathematics}
+
+\textbf{Fall 2019 and Fall 2020}
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Provided useful feedback and grading on undergraduate homework on a
+  routine basis. Courses include partial differential equations, linear
+  algebra, and college algebra. Worked in coordination with professors.
+\end{itemize}
+
+% --------------------------------------------------------------------------- %
+\subsection*{Tutor \textbar{} University of New Mexico Math and Learning
+Lab}\label{tutor-university-of-new-mexico-math-and-learning-lab}
+
+\textbf{Fall 2017 - Summer 2019}
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Improved student outcomes in basic algebra classes using the ALEKs
+  program by providing students individual attention.
+\end{itemize}
+
+% --------------------------------------------------------------------------- %
+\begin{center}
+\section*{Skills and Tools}\label{skills-and-tools}
+\end{center}
+
+\begin{itemize}
+\tightlist
+\item[--]
+  Languages: \texttt{Python}, \texttt{Javascript}, \texttt{HCL},
+  \texttt{Go}.
+\item[--]
+  Tools: \texttt{Kubernetes}, \texttt{Docker}, \texttt{Helm},
+  \texttt{Traefik}, \texttt{Terraform}, \texttt{Pulumi}.
+\item[--]
+  Libraries: \texttt{Pydantic}, \texttt{FastAPI}, \texttt{Typer},
+  \texttt{SQLAlchemy}, \texttt{NextJS}, Etc.
+\item[--]
+  Data: \texttt{YAML}, \texttt{JSON}, \texttt{CSS}, \texttt{HTML},
+  \texttt{XML}, \texttt{TOML}.
+\item[--]
+  Etc: \texttt{Pipelines}, \texttt{Infrastructure\ as\ Code},
+  \texttt{Continuous\ Integration\ and\ Deployment}.
+\item[--]
+  Databases: \texttt{MySQL}, \texttt{MongoDB}, \texttt{Redis}.
+\item[--]
+  Operating Systems: \texttt{Linux}, \texttt{Windows}.
+\item[--]
+  Editing tools: \texttt{Vim}, \texttt{Neovim},
+  \texttt{Visual\ Studio\ Code}.
+\end{itemize}
+\end{document}
+
+
+
