@@ -1,4 +1,4 @@
-FROM acederberg/captura-text:0.1.0-alpha AS production
+FROM acederberg/captura-text:0.1.1-alpha AS production
 COPY --chown=captura:captura . ./plugins/acederbergio
 COPY --chown=captura:captura ./docker/hooks.py /home/captura/.captura
 RUN bash /home/captura/docker.sh plugins >> /home/captura/.captura/logs/ci.log
